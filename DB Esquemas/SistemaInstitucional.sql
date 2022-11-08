@@ -49,12 +49,25 @@ CREATE TABLE Tarjetas (
     FOREIGN KEY(id_persona) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE Cuantas (
+CREATE TABLE Cuentas (
     id INTEGER auto_increment,
     numero VARCHAR(16) NOT NULL,
     nombre_titular VARCHAR(50) NOT NULL,
     email VARCHAR(30) NOT NULL,
     banco VARCHAR(20) NOT NULL,
+    -- Primary key
+    PRIMARY KEY(id),
+    -- Foreign key
+    id_persona INTEGER NOT NULL,
+    FOREIGN KEY(id_persona) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Historial (
+    id INTEGER auto_increment,
+    fecha DATE NOT NULL,
+    hora TIME NOT NULL,
+    servicio VARCHAR(20) NOT NULL,
+    metodo_pago VARCHAR(20) NOT NULL,
     -- Primary key
     PRIMARY KEY(id),
     -- Foreign key

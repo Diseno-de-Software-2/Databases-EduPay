@@ -11,11 +11,12 @@ CREATE TABLE Sedes(
 );
 
 CREATE TABLE Oficinas(
+    id INTEGER auto_increment,
     nombre VARCHAR(20) NOT NULL,
     contacto VARCHAR(50) NOT NULL,
     descripcion VARCHAR(100),
     -- Primary key
-    PRIMARY KEY(nombre,id_sede),
+    PRIMARY KEY(id),
     -- Foreign key
     id_sede INTEGER NOT NULL,
     FOREIGN KEY(id_sede) references Sedes(id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -58,8 +59,10 @@ CREATE TABLE Cuentas (
     -- Primary key
     PRIMARY KEY(id),
     -- Foreign key
-    id_persona INTEGER NOT NULL,
-    FOREIGN KEY(id_persona) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE
+    id_persona INTEGER,
+    FOREIGN KEY(id_persona) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    id_oficina INTEGER,
+    FOREIGN KEY(id_oficina) references Oficinas(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Historial (

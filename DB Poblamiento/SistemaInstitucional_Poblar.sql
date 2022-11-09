@@ -50,90 +50,35 @@ INSERT INTO Personas(nombre,apellidos,tipo,email,contraseña,fecha_nacimiento) V
 INSERT INTO Personas(nombre,apellidos,tipo,email,contraseña,fecha_nacimiento) VALUES("Francis", "Blanco Blanco","1","francescoVirgolini@gmail.com","123456","1978-05-12");
 INSERT INTO Personas(nombre,apellidos,tipo,email,contraseña,fecha_nacimiento) VALUES("Jose Daniel", "Ocoro Lucumi","1","niche@gmail.com","123456","1962-09-11");
 
--- Relaciones de trabajo Oficina-Funcionario
-INSERT INTO Trabaja(nombre_oficina,id_sede,id_funcionario,cargo) VALUES("Biblioteca",1,1,"Secretario");
-INSERT INTO Trabaja(nombre_oficina,id_sede,id_funcionario,cargo) VALUES("Centro Médico",3,2,"Consejero");
-
 -- Insertar servicios(Uno por oficina, 4 por sede)
 
 -- Barranquilla
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Préstamo de libro","Biblioteca",1,15000,"Préstamo de libro por una semana.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Certificado de notas","Registro",1,17000,"Expedición de certificado de notas.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Exámen de ETS","Centro Médico",1,40000,"Examen de sangre para diagnóstico de ETS.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Compra de Crédito","Finanzas",1,300000,"Compra de un crédito adicional para el semestre vigente.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Préstamo de libro",1,15000,"Préstamo de libro por una semana.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Exámen de ETS",2,40000,"Examen de sangre para diagnóstico de ETS.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Certificado de notas",3,17000,"Expedición de certificado de notas.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Compra de Crédito",4,300000,"Compra de un crédito adicional para el semestre vigente.");
 
 -- Cartagena
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Préstamo de libro","Biblioteca",2,15000,"Préstamo de libro por una semana.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Certificado de notas","Registro",2,17000,"Expedición de certificado de notas.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Exámen de ETS","Centro Médico",2,40000,"Examen de sangre para diagnóstico de ETS.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Compra de Crédito","Finanzas",2,300000,"Compra de un crédito adicional para el semestre vigente.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Préstamo de libro",5,15000,"Préstamo de libro por una semana.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Exámen de ETS",6,40000,"Examen de sangre para diagnóstico de ETS.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Certificado de notas",7,17000,"Expedición de certificado de notas.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Compra de Crédito",8,300000,"Compra de un crédito adicional para el semestre vigente.");
 
 -- Santa Marta
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Préstamo de libro","Biblioteca",3,15000,"Préstamo de libro por una semana.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Certificado de notas","Registro",3,17000,"Expedición de certificado de notas.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Exámen de ETS","Centro Médico",3,40000,"Examen de sangre para diagnóstico de ETS.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Compra de Crédito","Finanzas",3,300000,"Compra de un crédito adicional para el semestre vigente.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Préstamo de libro",9,15000,"Préstamo de libro por una semana.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Exámen de ETS",10,40000,"Examen de sangre para diagnóstico de ETS.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Certificado de notas",11,17000,"Expedición de certificado de notas.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Compra de Crédito",12,300000,"Compra de un crédito adicional para el semestre vigente.");
 
 -- Sincelejo
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Préstamo de libro","Biblioteca",4,15000,"Préstamo de libro por una semana.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Certificado de notas","Registro",4,17000,"Expedición de certificado de notas.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Exámen de ETS","Centro Médico",4,40000,"Examen de sangre para diagnóstico de ETS.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Compra de Crédito","Finanzas",4,300000,"Compra de un crédito adicional para el semestre vigente.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Préstamo de libro",13,15000,"Préstamo de libro por una semana.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Exámen de ETS",14,40000,"Examen de sangre para diagnóstico de ETS.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Certificado de notas",15,17000,"Expedición de certificado de notas.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Compra de Crédito",16,300000,"Compra de un crédito adicional para el semestre vigente.");
 
 -- Monteria
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Préstamo de libro","Biblioteca",5,15000,"Préstamo de libro por una semana.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Certificado de notas","Registro",5,17000,"Expedición de certificado de notas.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Exámen de ETS","Centro Médico",5,40000,"Examen de sangre para diagnóstico de ETS.");
-INSERT INTO Servicios(nombre,nombre_oficina,id_sede,valor,descripcion) VALUES("Compra de Crédito","Finanzas",5,300000,"Compra de un crédito adicional para el semestre vigente.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Préstamo de libro",17,15000,"Préstamo de libro por una semana.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Exámen de ETS",18,40000,"Examen de sangre para diagnóstico de ETS.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Certificado de notas",19,17000,"Expedición de certificado de notas.");
+INSERT INTO Servicios(nombre,id_oficina,valor,descripcion) VALUES("Compra de Crédito",20,300000,"Compra de un crédito adicional para el semestre vigente.");
 
--- Insertar comunicaciones oficina-banco
-
--- Barranquilla
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Finanzas",1);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Finanzas",1);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Biblioteca",1);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Biblioteca",1);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Centro Médico",1);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Centro Médico",1);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Registro",1);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Registro",1);
-
--- Cartagena
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Finanzas",2);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Finanzas",2);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Biblioteca",2);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Biblioteca",2);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Centro Médico",2);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Centro Médico",2);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Registro",2);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Registro",2);
-
--- Santa Marta
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Finanzas",3);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Finanzas",3);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Biblioteca",3);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Biblioteca",3);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Centro Médico",3);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Centro Médico",3);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Registro",3);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Registro",3);
-
--- Sincelejo
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Finanzas",4);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Finanzas",4);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Biblioteca",4);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Biblioteca",4);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Centro Médico",4);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Centro Médico",4);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Registro",4);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Registro",4);
-
--- Monteria
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Finanzas",5);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Finanzas",5);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Biblioteca",5);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Biblioteca",5);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Centro Médico",5);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Centro Médico",5);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(1,"Registro",5);
-INSERT INTO Comunicaciones(id_banco,nombre_oficina,id_sede) VALUES(2,"Registro",5);

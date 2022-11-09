@@ -79,52 +79,14 @@ CREATE TABLE Historial (
     FOREIGN KEY(id_persona) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE Trabaja(
-	cargo VARCHAR(20) NOT NULL,
-    -- Primary key
-    PRIMARY KEY(nombre_oficina,id_sede,id_funcionario),
-    -- Foreign keys
-    nombre_oficina VARCHAR(20) NOT NULL,
-    id_sede INTEGER NOT NULL,
-    id_funcionario INTEGER NOT NULL,
-    FOREIGN KEY(nombre_oficina,id_sede) references Oficinas(nombre,id_sede) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY(id_funcionario) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
 CREATE TABLE Servicios(
+    id INTEGER auto_increment,
     nombre VARCHAR(50) NOT NULL,
     valor FLOAT,
     descripcion VARCHAR(150) NOT NULL,
     -- Primary key
-    PRIMARY KEY(nombre,nombre_oficina,id_sede),
+    PRIMARY KEY(id),
     -- Foreign key
-    nombre_oficina VARCHAR(20) NOT NULL,
-    id_sede INTEGER NOT NULL,
-    FOREIGN KEY(nombre_oficina,id_sede) references Oficinas(nombre,id_sede) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-CREATE TABLE Ordenes (
-	id_orden INTEGER auto_increment,
-	fecha_generacion DATE NOT NULL,
-    estado_acceso BOOLEAN NOT NULL,
-    fecha_deduccion DATE,
-    -- Primary key
-    PRIMARY KEY(id_orden),
-    -- Foreign keys
-    id_persona INTEGER NOT NULL,
-    nombre_servicio VARCHAR(50) NOT NULL,
-    nombre_oficina VARCHAR(20) NOT NULL,
-    id_sede INTEGER NOT NULL,
-    FOREIGN KEY(id_persona) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY(nombre_servicio,nombre_oficina,id_sede) references Servicios(nombre,nombre_oficina,id_sede) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-CREATE TABLE Comunicaciones(
-    id_banco INTEGER NOT NULL,
-    -- Primary key
-    PRIMARY KEY(nombre_oficina,id_sede,id_banco),
-    -- Foreign keys
-    nombre_oficina VARCHAR(20) NOT NULL,
-    id_sede INTEGER NOT NULL,
-    FOREIGN KEY(nombre_oficina,id_sede) references Oficinas(nombre,id_sede) ON DELETE CASCADE ON UPDATE CASCADE
+    id_oficina INTEGER NOT NULL,
+    FOREIGN KEY(id_oficina) references Oficinas(id) ON DELETE CASCADE ON UPDATE CASCADE
 );

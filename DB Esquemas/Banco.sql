@@ -26,7 +26,6 @@ CREATE TABLE Cuenta(
 CREATE TABLE Tarjeta (
     id INTEGER auto_increment,
     numero VARCHAR(16) NOT NULL,
-    nombre_titular VARCHAR(50) NOT NULL,
     fecha_expiracion DATE NOT NULL,
     cvv VARCHAR(3) NOT NULL,
     proveedor VARCHAR(20) NOT NULL,

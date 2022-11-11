@@ -30,6 +30,7 @@ CREATE TABLE Tarjeta (
     fecha_expiracion DATE NOT NULL,
     cvv VARCHAR(3) NOT NULL,
     proveedor VARCHAR(20) NOT NULL,
+    credito FLOAT NOT NULL,
     -- Primary key
     PRIMARY KEY(id),
     -- Foreign key

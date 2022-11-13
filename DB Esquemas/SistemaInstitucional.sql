@@ -69,7 +69,7 @@ CREATE TABLE Historial (
     hora TIME NOT NULL,
     servicio VARCHAR(20) NOT NULL,
     precio DECIMAL(20,2) NOT NULL,
-    metodo_pago VARCHAR(20) NOT NULL,
+    metodo_pago VARCHAR(80) NOT NULL,
     cuotas INTEGER,
     -- Primary key
     PRIMARY KEY(id),

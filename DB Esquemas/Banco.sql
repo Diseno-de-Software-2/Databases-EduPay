@@ -42,15 +42,14 @@ CREATE TABLE Transaccion(
     fecha DATE NOT NULL,
     hora TIME NOT NULL,
     tipo ENUM('0','1') NOT NULL, -- 0: Retiro, 1: Deposito
-    id_banco INTEGER NOT NULL,
     monto FLOAT NOT NULL,
     -- Primary key
     PRIMARY KEY(id),
     -- Foreign key
-    id_cuenta INTEGER NOT NULL,
-    numero_tarjeta VARCHAR(16),
+    id_cuenta INTEGER,
+    id_tarjeta INTEGER,
     FOREIGN KEY(id_cuenta) 
     references Cuenta(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY(id_banco) 
-    references Banco(id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY(id_tarjeta)
+    REFERENCES Tarjeta(id) ON DELETE CASCADE ON UPDATE CASCADE
 );

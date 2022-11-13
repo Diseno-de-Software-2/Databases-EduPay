@@ -60,9 +60,7 @@ CREATE TABLE Cuentas (
     PRIMARY KEY(id),
     -- Foreign key
     id_persona INTEGER,
-    FOREIGN KEY(id_persona) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    id_oficina INTEGER,
-    FOREIGN KEY(id_oficina) references Oficinas(id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY(id_persona) references Personas(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Historial (
@@ -72,6 +70,7 @@ CREATE TABLE Historial (
     servicio VARCHAR(20) NOT NULL,
     precio DECIMAL(20,2) NOT NULL,
     metodo_pago VARCHAR(20) NOT NULL,
+    cuotas INTEGER,
     -- Primary key
     PRIMARY KEY(id),
     -- Foreign key

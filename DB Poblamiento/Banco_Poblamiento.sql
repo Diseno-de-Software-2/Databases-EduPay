@@ -2,7 +2,7 @@ use SistemaBancos;
 
 INSERT INTO banco(nombre) VALUES ('Western Bank');
 
-INSERT INTO banco(nombre) VALUES ('Eastern Bank');
+INSERT INTO banco(nombre) VALUES ('East Bank');
 
 INSERT INTO cuenta
 VALUES (

@@ -82,6 +82,7 @@ CREATE TABLE
         precio DECIMAL(20, 2) NOT NULL,
         metodo_pago VARCHAR(80) NOT NULL,
         cuotas INTEGER,
+        exitoso BOOLEAN NOT NULL,
         -- Primary key
         PRIMARY KEY(id),
         -- Foreign key

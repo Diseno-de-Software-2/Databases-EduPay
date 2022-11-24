@@ -54,7 +54,7 @@
 
 --
 
-use sistemabanco;
+use sistemabancos;
 
 DROP TABLE IF EXISTS `banco`;
 
